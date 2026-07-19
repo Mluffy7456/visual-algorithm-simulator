@@ -16,6 +16,8 @@ class SimulationEngine(QObject):
 
         self.speed = 40
 
+    # --------------------------------------------------
+
     def load_algorithm(self, algorithm):
         self.stop()
 
@@ -26,6 +28,8 @@ class SimulationEngine(QObject):
 
         self.console.clear()
         self.console.write(f"Loaded: {algorithm.name}")
+
+    # --------------------------------------------------
 
     def start(self):
         if self.algorithm is None:
@@ -38,12 +42,18 @@ class SimulationEngine(QObject):
 
         self.timer.start(interval)
 
+    # --------------------------------------------------
+
     def stop(self):
         self.timer.stop()
+
+    # --------------------------------------------------
 
     def pause(self):
         self.timer.stop()
         self.console.write("Paused.")
+
+    # --------------------------------------------------
 
     def reset(self):
         self.stop()
@@ -55,7 +65,10 @@ class SimulationEngine(QObject):
 
         self.statistics.reset()
 
+        self.console.clear()
         self.console.write("Array regenerated.")
+
+    # --------------------------------------------------
 
     def set_speed(self, speed):
         self.speed = speed
@@ -64,18 +77,32 @@ class SimulationEngine(QObject):
             interval = max(1, 101 - speed)
             self.timer.start(interval)
 
+    # --------------------------------------------------
+
+    def update_statistics(self):
+        if self.algorithm is None:
+            return
+
+        self.statistics.update_statistics(
+            self.algorithm.comparisons,
+            self.algorithm.swaps,
+            self.algorithm.array_accesses,
+            self.algorithm.elapsed_time,
+        )
+
+    # --------------------------------------------------
+
     def next_step(self):
         if self.algorithm is None:
             return
 
         finished = self.algorithm.step()
 
-        self.statistics.update_statistics(
-            self.algorithm.comparisons,
-            self.algorithm.swaps
-        )
+        self.update_statistics()
 
         if finished:
             self.stop()
+
+            self.update_statistics()
 
             self.console.write("Finished.")

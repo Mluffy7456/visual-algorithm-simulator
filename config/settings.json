@@ -1,0 +1,26 @@
+{
+    "language": "en",
+    "theme": "dark",
+    "window": {
+        "width": 1600,
+        "height": 900,
+        "fullscreen": false
+    },
+    "animation": {
+        "speed": 1,
+        "smooth": true
+    },
+    "array": {
+        "size": 60
+    },
+    "interface": {
+        "show_legend": true,
+        "show_statistics": true,
+        "show_algorithm_info": true,
+        "show_step_explanation": true,
+        "show_console": true
+    },
+    "sound": {
+        "enabled": false
+    }
+}

@@ -7,6 +7,9 @@ from PySide6.QtWidgets import (
     QWidget,
 )
 
+from config.language_manager import tr
+from config.settings_manager import SettingsManager
+
 
 class ControlPanel(QWidget):
     start_clicked = Signal()
@@ -22,22 +25,31 @@ class ControlPanel(QWidget):
 
         self.build_ui()
         self.connect_signals()
+        self.retranslate_ui()
 
     def build_ui(self):
         layout = QHBoxLayout(self)
+        layout.setContentsMargins(0, 0, 0, 0)
+        layout.setSpacing(8)
 
-        self.generate_button = QPushButton("Generate")
-        self.start_button = QPushButton("Start")
-        self.pause_button = QPushButton("Pause")
-        self.step_button = QPushButton("Step")
-        self.reset_button = QPushButton("Reset")
+        self.generate_button = QPushButton()
+        self.start_button = QPushButton()
+        self.pause_button = QPushButton()
+        self.step_button = QPushButton()
+        self.reset_button = QPushButton()
 
-        self.speed_label = QLabel("Speed")
+        self.speed_label = QLabel()
 
         self.speed_slider = QSlider(Qt.Horizontal)
         self.speed_slider.setRange(1, 100)
-        self.speed_slider.setValue(40)
         self.speed_slider.setFixedWidth(180)
+
+        self.speed_slider.setValue(
+            SettingsManager.get(
+                "animation.speed",
+                40
+            )
+        )
 
         layout.addWidget(self.generate_button)
         layout.addWidget(self.start_button)
@@ -73,4 +85,41 @@ class ControlPanel(QWidget):
 
         self.speed_slider.valueChanged.connect(
             self.speed_changed.emit
+        )
+
+        self.speed_slider.valueChanged.connect(
+            self.save_speed
+        )
+
+    def save_speed(self, value):
+        SettingsManager.set(
+            "animation.speed",
+            value
+        )
+
+        SettingsManager.save()
+
+    def retranslate_ui(self):
+        self.generate_button.setText(
+            "🎲 " + tr("generate")
+        )
+
+        self.start_button.setText(
+            "▶ " + tr("start")
+        )
+
+        self.pause_button.setText(
+            "⏸ " + tr("pause")
+        )
+
+        self.step_button.setText(
+            "⏭ " + tr("step")
+        )
+
+        self.reset_button.setText(
+            "⟲ " + tr("reset")
+        )
+
+        self.speed_label.setText(
+            tr("animation_speed")
         )

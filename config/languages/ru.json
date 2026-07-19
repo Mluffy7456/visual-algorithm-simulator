@@ -1,0 +1,99 @@
+{
+    "app_name": "Visual Algorithm Simulator",
+
+    "settings": "Настройки",
+    "save": "Сохранить",
+    "cancel": "Отмена",
+
+    "appearance": "Внешний вид",
+    "theme": "Тема",
+    "dark": "Темная",
+    "light": "Светлая",
+
+    "language": "Язык",
+
+    "animation": "Анимация",
+    "animation_speed": "Скорость анимации",
+    "array_size": "Размер массива",
+
+    "information": "Информация",
+
+    "show_legend": "Показывать легенду",
+    "show_statistics": "Показывать статистику",
+    "show_algorithm_info": "Показывать информацию об алгоритме",
+    "show_step_explanation": "Показывать описание шага",
+    "show_console": "Показывать консоль",
+    "play_sounds": "Воспроизводить звуки",
+
+    "generate": "Сгенерировать",
+    "start": "Старт",
+    "pause": "Пауза",
+    "step": "Шаг",
+    "reset": "Сброс",
+
+    "algorithms": "Алгоритмы",
+
+    "sorting": "Алгоритмы сортировки",
+    "searching": "Алгоритмы поиска",
+    "graph": "Алгоритмы графов",
+    "trees": "Деревья",
+    "dynamic": "Динамическое программирование",
+    "geometry": "Геометрические алгоритмы",
+
+    "statistics": "Статистика",
+    "console": "Консоль",
+
+    "comparisons": "Сравнения",
+    "swaps": "Перестановки",
+    "array_accesses": "Обращения к массиву",
+    "elapsed_time": "Время выполнения",
+
+    "algorithm_information": "Информация об алгоритме",
+
+    "category": "Категория",
+    "complexity": "Сложность",
+    "best_case": "Лучший случай",
+    "average_case": "Средний случай",
+    "worst_case": "Худший случай",
+    "memory": "Память",
+    "stable": "Стабильность",
+    "in_place": "На месте",
+
+    "yes": "Да",
+    "no": "Нет",
+
+    "legend": "Легенда",
+
+    "default": "Обычный",
+    "comparing": "Сравнение",
+    "pivot": "Опорный элемент",
+    "minimum": "Минимум",
+    "moving": "Перемещение",
+    "sorted": "Отсортировано",
+    "active_range": "Активная область",
+
+    "ready": "Готов",
+    "running": "Выполняется",
+    "paused": "Приостановлен",
+    "finished": "Завершен",
+
+    "bubble_sort": "Bubble Sort",
+    "selection_sort": "Selection Sort",
+    "insertion_sort": "Insertion Sort",
+    "merge_sort": "Merge Sort",
+    "quick_sort": "Quick Sort",
+    "heap_sort": "Heap Sort",
+    "shell_sort": "Shell Sort",
+    "cocktail_sort": "Cocktail Sort",
+    "comb_sort": "Comb Sort",
+    "gnome_sort": "Gnome Sort",
+    "odd_even_sort": "Odd-Even Sort",
+    "counting_sort": "Counting Sort",
+    "radix_sort": "Radix Sort",
+    "bucket_sort": "Bucket Sort",
+    "cycle_sort": "Cycle Sort",
+    "pancake_sort": "Pancake Sort",
+    "tim_sort": "TimSort",
+    "stooge_sort": "Stooge Sort",
+    "bogo_sort": "Bogo Sort"
+}

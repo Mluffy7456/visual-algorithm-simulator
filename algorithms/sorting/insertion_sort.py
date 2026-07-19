@@ -17,6 +17,8 @@ class InsertionSort(Algorithm):
         for i in range(1, n):
 
             key = values[i]
+            self.array_accesses += 1
+
             j = i - 1
 
             while j >= 0:
@@ -24,20 +26,28 @@ class InsertionSort(Algorithm):
                 self.canvas.highlight(j, j + 1)
 
                 self.comparisons += 1
+                self.array_accesses += 1
+
                 yield
 
                 if values[j] <= key:
                     break
 
                 values[j + 1] = values[j]
+
+                self.array_accesses += 2
+                self.swaps += 1
+
                 self.canvas.update()
 
-                self.swaps += 1
                 yield
 
                 j -= 1
 
             values[j + 1] = key
+
+            self.array_accesses += 1
+
             self.canvas.update()
 
             for k in range(i + 1):

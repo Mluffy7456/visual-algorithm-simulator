@@ -1,0 +1,99 @@
+{
+    "app_name": "Visual Algorithm Simulator",
+
+    "settings": "Settings",
+    "save": "Save",
+    "cancel": "Cancel",
+
+    "appearance": "Appearance",
+    "theme": "Theme",
+    "dark": "Dark",
+    "light": "Light",
+
+    "language": "Language",
+
+    "animation": "Animation",
+    "animation_speed": "Animation Speed",
+    "array_size": "Array Size",
+
+    "information": "Information",
+
+    "show_legend": "Show Legend",
+    "show_statistics": "Show Statistics",
+    "show_algorithm_info": "Show Algorithm Information",
+    "show_step_explanation": "Show Step Explanation",
+    "show_console": "Show Console",
+    "play_sounds": "Play Sounds",
+
+    "generate": "Generate",
+    "start": "Start",
+    "pause": "Pause",
+    "step": "Step",
+    "reset": "Reset",
+
+    "algorithms": "Algorithms",
+
+    "sorting": "Sorting Algorithms",
+    "searching": "Searching Algorithms",
+    "graph": "Graph Algorithms",
+    "trees": "Tree Algorithms",
+    "dynamic": "Dynamic Programming",
+    "geometry": "Geometry Algorithms",
+
+    "statistics": "Statistics",
+    "console": "Console",
+
+    "comparisons": "Comparisons",
+    "swaps": "Swaps",
+    "array_accesses": "Array Accesses",
+    "elapsed_time": "Elapsed Time",
+
+    "algorithm_information": "Algorithm Information",
+
+    "category": "Category",
+    "complexity": "Complexity",
+    "best_case": "Best Case",
+    "average_case": "Average Case",
+    "worst_case": "Worst Case",
+    "memory": "Memory",
+    "stable": "Stable",
+    "in_place": "In-place",
+
+    "yes": "Yes",
+    "no": "No",
+
+    "legend": "Legend",
+
+    "default": "Default",
+    "comparing": "Comparing",
+    "pivot": "Pivot",
+    "minimum": "Minimum",
+    "moving": "Moving",
+    "sorted": "Sorted",
+    "active_range": "Active Range",
+
+    "ready": "Ready",
+    "running": "Running",
+    "paused": "Paused",
+    "finished": "Finished",
+
+    "bubble_sort": "Bubble Sort",
+    "selection_sort": "Selection Sort",
+    "insertion_sort": "Insertion Sort",
+    "merge_sort": "Merge Sort",
+    "quick_sort": "Quick Sort",
+    "heap_sort": "Heap Sort",
+    "shell_sort": "Shell Sort",
+    "cocktail_sort": "Cocktail Sort",
+    "comb_sort": "Comb Sort",
+    "gnome_sort": "Gnome Sort",
+    "odd_even_sort": "Odd-Even Sort",
+    "counting_sort": "Counting Sort",
+    "radix_sort": "Radix Sort",
+    "bucket_sort": "Bucket Sort",
+    "cycle_sort": "Cycle Sort",
+    "pancake_sort": "Pancake Sort",
+    "tim_sort": "TimSort",
+    "stooge_sort": "Stooge Sort",
+    "bogo_sort": "Bogo Sort"
+}

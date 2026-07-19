@@ -12,7 +12,6 @@ class BubbleSort(Algorithm):
         n = len(values)
 
         for i in range(n):
-
             swapped = False
 
             for j in range(n - i - 1):
@@ -20,6 +19,8 @@ class BubbleSort(Algorithm):
                 self.canvas.highlight(j, j + 1)
 
                 self.comparisons += 1
+                self.array_accesses += 2
+
                 yield
 
                 if values[j] > values[j + 1]:
@@ -27,6 +28,8 @@ class BubbleSort(Algorithm):
                     self.canvas.swap(j, j + 1)
 
                     self.swaps += 1
+                    self.array_accesses += 4
+
                     swapped = True
 
                     yield

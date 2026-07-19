@@ -119,3 +119,10 @@ class Canvas(QWidget):
                 int(bar_height),
                 color,
             )
+    
+    def value(self, index):
+        return self.values[index]
+
+
+    def length(self):
+        return len(self.values)
